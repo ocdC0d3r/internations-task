@@ -15,7 +15,7 @@ Route::resource('user', 'Api\UserController', [
     'only' => ['store', 'destroy']
 ]);
 
-Route::post('user/{user_id}/group/{group_id}', 'Api\UserController@toggleGroupMembership')->middleware('auth:api');
+Route::post('user/{user_id}/group/{group_id}', 'Api\UserController@toggleGroupMembership');
 
 Route::resource('group', 'Api\GroupController', [
     'only' => ['store', 'destroy']
